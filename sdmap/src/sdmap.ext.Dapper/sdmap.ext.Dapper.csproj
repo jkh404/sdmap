@@ -34,7 +34,9 @@ https://github.com/sdcb/sdmap/blob/master/ReleaseNotes.md</PackageReleaseNotes>
     <PackageReference Include="Dapper" Version="1.60.6" />
     <PackageReference Include="System.IO.Abstractions" Version="5.0.1" />
   </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\sdmap.ext\sdmap.ext.csproj" />
+	</ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\LICENSE">
       <Pack>True</Pack>

@@ -33,8 +33,11 @@ https://github.com/sdcb/sdmap/blob/master/ReleaseNotes.md</PackageReleaseNotes>
   <ItemGroup>
     <PackageReference Include="System.IO.Abstractions" Version="5.0.1" />
   </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\sdmap\sdmap.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <None Include="..\..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
