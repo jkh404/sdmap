@@ -4,13 +4,22 @@ using sdmap.Macros;
 using sdmap.Parser.G4;
 using sdmap.Parser.Visitor;
 using System.Linq;
+using System.Reflection;
 
 namespace sdmap.Compiler
 {
     public class SdmapCompiler
     {
+        private readonly Assembly CallingAssembly;
         private readonly SdmapCompilerContext _context;
 
+        public SdmapCompiler(Assembly callingAssembly)
+        {
+            CallingAssembly=callingAssembly;
+            _context = SdmapCompilerContext.Create(callingAssembly,
+                new System.Collections.Generic.Dictionary<string, SqlEmiter>(),
+                new System.Collections.Generic.Stack<string>());
+        }
         public SdmapCompiler()
         {
             _context = SdmapCompilerContext.CreateEmpty();
@@ -36,9 +45,9 @@ namespace sdmap.Compiler
         {
             return _context.MacroManager.Add(new Macro
             {
-                Name = id, 
-                Arguments = arguments, 
-                Method = method, 
+                Name = id,
+                Arguments = arguments,
+                Method = method,
             });
         }
 
@@ -46,15 +55,15 @@ namespace sdmap.Compiler
         {
             return _context.MacroManager.Add(new Macro
             {
-                Name = id, 
-                Method = method, 
+                Name = id,
+                Method = method,
                 SkipArgumentRuntimeCheck = true
             });
         }
 
         public Result<string> TryEmit(string id, object query)
         {
-            lock(_context)
+            lock (_context)
             {
                 return _context.TryGetEmiter(id, _context.CurrentNs)
                     .OnSuccess(emiter => emiter.TryEmit(new OneCallContext(_context, query)));

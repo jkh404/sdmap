@@ -92,5 +92,10 @@ namespace sdmap.ext
 
             return result;
         }
+
+        public string Emit(string assemblyFullName, string statementId, object parameters)
+        {
+            throw new NotSupportedException();
+        }
     }
 }

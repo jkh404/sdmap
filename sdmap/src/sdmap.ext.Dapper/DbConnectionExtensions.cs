@@ -50,7 +50,11 @@ namespace sdmap.ext.Dapper
         {
             return SqlEmiter.Emit(sqlMapId, param);
         }
+        public static string EmitSql(string assemblyFullName, string sqlMapId, object param)
+        {
 
+            return SqlEmiter.Emit(assemblyFullName, sqlMapId, param);
+        }
         public static int ExecuteByMap(this IDbConnection cnn,
             string sqlMapName,
             object param = null,
