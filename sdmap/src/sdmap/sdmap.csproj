@@ -1,25 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(MSBuildThisFileDirectory)\..\..\Common.Version.props"/>
+  <Import Project="$(MSBuildThisFileDirectory)\..\..\Common.Version.props" />
 
   <PropertyGroup>
-    <Description>A template engine for writing dynamic sql.</Description>
     <TargetFrameworks>net6;netstandard20</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <AssemblyName>sdmap</AssemblyName>
-    <PackageId>sdmap</PackageId>
+    
     <PackageTags>dynamic sql;ibatis</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReleaseNotes>https://github.com/sdcb/sdmap/blob/master/ReleaseNotes.md</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/sdcb/sdmap</RepositoryUrl>
+    
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Authors>sdcb</Authors>
     <Copyright>MIT</Copyright>
-    <PackageProjectUrl>https://github.com/sdcb/sdmap</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -27,6 +24,12 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <DebugType>embedded</DebugType>
+	  
+	  <PackageId>sky.sdmap</PackageId>
+	  <Description>A template engine for writing dynamic sql.自定义了命名空间部分，现在可以按项目命名空间区分sql</Description>
+	  <PackageProjectUrl>https://github.com/jkh404/sdmap</PackageProjectUrl>
+	  <Authors>Skyqwe</Authors>
+	  <RepositoryUrl>https://github.com/jkh404/sdmap</RepositoryUrl>
   </PropertyGroup>
 
 

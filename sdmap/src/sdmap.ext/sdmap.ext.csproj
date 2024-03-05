@@ -1,39 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(MSBuildThisFileDirectory)\..\..\Common.Version.props"/>
+  <Import Project="$(MSBuildThisFileDirectory)\..\..\Common.Version.props" />
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;netstandard20</TargetFrameworks>
     <AssemblyName>sdmap.ext</AssemblyName>
-    <PackageId>sdmap.ext</PackageId>
     <PackageTags>dynamic sql;sdmap</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReleaseNotes>For more information, please view:
 https://github.com/sdcb/sdmap/blob/master/ReleaseNotes.md</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/sdcb/sdmap</RepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <Description>Useful extensions for sdmap/Dapper.</Description>
-    <PackageProjectUrl>https://github.com/sdcb/sdmap</PackageProjectUrl>
-    <Authors>sdcb</Authors>
     <Copyright>MIT</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+	  <PackageId>sky.sdmap.ext</PackageId>
+	  <Description>A template engine for writing dynamic sql.自定义了命名空间部分，现在可以按项目命名空间区分sql</Description>
+	  <PackageProjectUrl>https://github.com/jkh404/sdmap</PackageProjectUrl>
+	  <Authors>Skyqwe</Authors>
+	  <RepositoryUrl>https://github.com/jkh404/sdmap</RepositoryUrl>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="System.IO.Abstractions" Version="5.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\sdmap\sdmap.csproj" />
   </ItemGroup>
 
   <ItemGroup>
