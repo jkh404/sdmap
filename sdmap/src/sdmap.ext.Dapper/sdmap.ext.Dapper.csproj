@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildThisFileDirectory)\..\..\Common.Version.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;netstandard20</TargetFrameworks>
+	  <TargetFrameworks>net8;net6</TargetFrameworks>
     <AssemblyName>sdmap.ext.Dapper</AssemblyName>
     <PackageTags>dynamic sql;sdmap;dapper</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -27,12 +27,12 @@ https://github.com/sdcb/sdmap/blob/master/ReleaseNotes.md</PackageReleaseNotes>
 	  <PackageProjectUrl>https://github.com/jkh404/sdmap</PackageProjectUrl>
 	  <Authors>Skyqwe</Authors>
 	  <RepositoryUrl>https://github.com/jkh404/sdmap</RepositoryUrl>
+	  <Version>0.17.2</Version>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.60.6" />
-    <PackageReference Include="System.IO.Abstractions" Version="5.0.1" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
   </ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\sdmap.ext\sdmap.ext.csproj" />

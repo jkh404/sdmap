@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildThisFileDirectory)\..\..\Common.Version.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net6;netstandard20</TargetFrameworks>
+    <TargetFrameworks>net8;net6</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <AssemblyName>sdmap</AssemblyName>
     
@@ -30,6 +30,7 @@
 	  <PackageProjectUrl>https://github.com/jkh404/sdmap</PackageProjectUrl>
 	  <Authors>Skyqwe</Authors>
 	  <RepositoryUrl>https://github.com/jkh404/sdmap</RepositoryUrl>
+	  <Version>0.17.2</Version>
   </PropertyGroup>
 
 
@@ -50,11 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
     <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
     <PackageReference Include="Antlr4.CodeGenerator" Version="4.6.6">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
   </ItemGroup>
 </Project>

@@ -110,6 +110,14 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\sdmap.ext.Dapper\sdmap.ext.Dapper.csproj">
+      <Project>{caa406fc-ab25-48e0-82b2-8d683937d88a}</Project>
+      <Name>sdmap.ext.Dapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sdmap.ext\sdmap.ext.csproj">
+      <Project>{a31bb69a-7fd4-4fe5-bf3f-949ded67eb6a}</Project>
+      <Name>sdmap.ext</Name>
+    </ProjectReference>
     <ProjectReference Include="..\sdmap\sdmap.csproj">
       <Project>{dee11876-5627-4ffa-9d61-aaf166b479fc}</Project>
       <Name>sdmap</Name>

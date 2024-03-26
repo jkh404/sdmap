@@ -76,7 +76,8 @@ namespace sdmap.ext
 
             var result = new FileSystemSqlEmiter(compiler);
 
-            var watcher = fileSystem.FileSystemWatcher.FromPath(sqlDirectory);
+            
+            var watcher = fileSystem.FileSystemWatcher.New(sqlDirectory);
             watcher.Path = sqlDirectory;
             watcher.EnableRaisingEvents = true;
             watcher.NotifyFilter = NotifyFilters.LastWrite;
